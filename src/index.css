@@ -1,0 +1,256 @@
+/* ===== Universal Selector / Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base Layout ===== */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===== Header ===== */
+header {
+  background-color: #cc0000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  margin: 20px auto;
+  width: 90%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #cc0000;
+  color: white;
+}
+
+nav ul li a.active {
+  background-color: #cc0000;
+  color: white;
+}
+
+/* ===== Main Content ===== */
+main {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 4px;
+  border-top: 4px solid #cc0000;
+  width: 90%;
+  margin: 0 auto 20px auto;
+  flex: 1;
+}
+
+main section {
+  margin-bottom: 20px;
+}
+
+main h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+main h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+main p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+main ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+main ul li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+main img {
+  display: block;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #cc0000;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
+footer a {
+  color: white;
+  margin-left: 10px;
+}
+
+/* ===== Table Styling ===== */
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ref-table th,
+.ref-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.ref-table th {
+  background-color: #f5f5f5;
+}
+
+/* ===== Calculator ===== */
+.calculator {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculator label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.calculator input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.calculator .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.calculator button {
+  padding: 10px 20px;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  flex: 1;
+}
+
+.calculator button:hover {
+  background-color: #aa0000;
+}
+
+.calculator #output {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.calculator #output.negative {
+  color: red;
+}
+
+/* ===== Responsive (Mobile First - use max-width instead of min-width) ===== */
+@media (max-width: 749px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 12px;
+  }
+
+  .calculator .buttons {
+    flex-direction: column;
+  }
+
+  .calculator button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main,
+  nav {
+    width: 95%;
+    padding: 15px;
+  }
+}
