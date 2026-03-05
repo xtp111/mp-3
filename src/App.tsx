@@ -50,7 +50,7 @@ function Root() {
                         element={<Experience />}
                     />
                     <Route
-                        path={`/achievements`}
+                        path={`/certifications`}
                         element={<Certifications />}
                     />
                     <Route
@@ -58,7 +58,7 @@ function Root() {
                         element={<References />}
                     />
                     <Route
-                        path={`/documents`}
+                        path={`/projects`}
                         element={<Projects />}
                     />
                 </Routes>
