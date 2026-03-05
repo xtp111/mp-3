@@ -46,7 +46,7 @@ function Root() {
                         element={<Education />}
                     />
                     <Route
-                        path={`/employment`}
+                        path={`/experience`}
                         element={<Experience />}
                     />
                     <Route
