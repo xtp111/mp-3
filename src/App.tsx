@@ -19,6 +19,9 @@ const StyledWrapper = styled.div`
     margin: 0 auto;
     background-color: burlywood;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 `;
 
 const StyledContainer = styled.div`
