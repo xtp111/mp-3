@@ -18,6 +18,7 @@ const StyledWrapper = styled.div`
     width: 100%;
     margin: 0 auto;
     background-color: burlywood;
+    flex: 1;
 `;
 
 const StyledContainer = styled.div`
