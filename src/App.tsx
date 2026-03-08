@@ -25,6 +25,7 @@ const StyledContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex: 1;
     
     @media screen and (max-width: 1000px) {
         flex-direction: column;
