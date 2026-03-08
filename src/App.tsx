@@ -21,7 +21,7 @@ const StyledWrapper = styled.div`
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh
 `;
 
 const StyledContainer = styled.div`
@@ -38,6 +38,7 @@ const StyledContainer = styled.div`
 const StyledMain = styled.div`
     flex: 1;
     min-width: 0;
+    background-color: #fafafa
 `;
 
 function Root() {
