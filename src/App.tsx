@@ -15,7 +15,7 @@ import styled from "styled-components";
 
 
 const StyledWrapper = styled.div`
-    width: 80vw;
+    width: 100%;
     margin: 0 auto;
     background-color: burlywood;
 `;
@@ -30,12 +30,18 @@ const StyledContainer = styled.div`
     }
 `;
 
+const StyledMain = styled.div`
+    flex: 1;
+    min-width: 0;
+`;
+
 function Root() {
     return (
         <StyledWrapper>
             <Header />
             <StyledContainer>
                 <Nav />
+                <StyledMain>
                 <Routes>
                     <Route
                         path={`/`}
@@ -62,6 +68,7 @@ function Root() {
                         element={<Projects />}
                     />
                 </Routes>
+            </StyledMain>
             </StyledContainer>
             <Footer />
         </StyledWrapper>
